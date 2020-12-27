@@ -4,8 +4,8 @@ import os
 import random
 import socket
 from logging.handlers import RotatingFileHandler
-from nodes import RootNode
-from compute_gain import ghost_gain, inspector_gain
+from src_ai.nodes import RootNode
+from src_ai.compute_gain import ghost_gain, inspector_gain
 
 import protocol
 
@@ -33,8 +33,7 @@ stream_handler.setLevel(logging.WARNING)
 fantom_logger.addHandler(stream_handler)
 
 
-class Player():
-
+class Player:
     def __init__(self):
 
         self.end = False
@@ -108,5 +107,4 @@ class Player():
 
 
 p = Player()
-
 p.run()
